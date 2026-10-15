@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this frozen research-use inference tool, please cite the associated manuscript and this software release."
+title: "Frozen M1 Research-Use Inference Tool for Repeat Neurological Assessment"
+type: software
+version: 1.0.0
+date-released: 2026-10-15
+license: MIT
+repository-code: "https://github.com/lwg550-maker/Neurological-Deterioration-Assessment"
+url: "https://lwg550-maker.github.io/Neurological-Deterioration-Assessment/"
+authors:
+  - family-names: Li
+    given-names: Wengang
+  - family-names: Tan
+    given-names: Zhiling
+  - family-names: Ye
+    given-names: Youzhong
+  - family-names: Lyu
+    given-names: Jun
+  - family-names: Wang
+    given-names: Xiangyu

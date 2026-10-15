@@ -1,0 +1,122 @@
+{
+  "audit_type": "frozen_m1_public_release_preflight",
+  "release": "v1.0.0",
+  "created_utc": "2026-10-15T09:17:59.240879+00:00",
+  "remote_status": "release_candidate_pre_push",
+  "repository": "https://github.com/lwg550-maker/Neurological-Deterioration-Assessment",
+  "pages_url": "https://lwg550-maker.github.io/Neurological-Deterioration-Assessment/",
+  "release_url": "https://github.com/lwg550-maker/Neurological-Deterioration-Assessment/releases/tag/v1.0.0",
+  "commit_sha": null,
+  "model_refit": false,
+  "threshold_changed": false,
+  "threshold": 0.028094640664533963,
+  "threshold_display": 0.0281,
+  "threshold_rule": "inclusive score >= threshold",
+  "threshold_selection": "MIMIC-IV 2017-2019 freeze set; event-level target sensitivity 80%; not validation set, Youden index, or 0.5",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "node": "v24.19.0"
+  },
+  "synthetic_example": {
+    "m1_event_cif_6h": 0.056738982411137256,
+    "competitor_cif_6h": 0.1347475396927663,
+    "threshold": 0.028094640664533963,
+    "alert": true
+  },
+  "reproduction_audit": {
+    "columns": [
+      "expected",
+      "recomputed",
+      "absolute_error"
+    ],
+    "rows": 1000,
+    "maximum_absolute_error": 1.1102230246251565e-16,
+    "tolerance": 1e-12,
+    "identifier_column_hits": [],
+    "contains_patient_level_source_fields": false
+  },
+  "static_checks": {
+    "prohibited_network_tokens": [],
+    "prohibited_local_paths": []
+  },
+  "test_runs": {
+    "python": {
+      "command": [
+        "python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_frozen_inference.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_exact_frozen_threshold_and_alert_rule (test_frozen_inference.FrozenInferenceTests.test_exact_frozen_threshold_and_alert_rule) ... ok\ntest_missing_continuous_value_uses_frozen_development_median (test_frozen_inference.FrozenInferenceTests.test_missing_continuous_value_uses_frozen_development_median) ... ok\ntest_synthetic_example_matches_archived_output (test_frozen_inference.FrozenInferenceTests.test_synthetic_example_matches_archived_output) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.001s\n\nOK",
+      "passed": true
+    },
+    "html": {
+      "command": [
+        "node.exe",
+        "tests/test_html_calculator.mjs"
+      ],
+      "returncode": 0,
+      "stdout": "{\"m1_event_cif_6h\":0.05673898241113727,\"competitor_cif_6h\":0.1347475396927663,\"threshold\":0.028094640664533963,\"alert\":true}",
+      "stderr": "",
+      "passed": true
+    }
+  },
+  "checks": {
+    "exact_threshold_matches": true,
+    "synthetic_event_cif_matches": true,
+    "synthetic_competing_cif_matches": true,
+    "synthetic_alert_true": true,
+    "synthetic_output_matches": true,
+    "calculator_and_docs_identical": true,
+    "calculator_contains_exact_threshold": true,
+    "calculator_uses_inclusive_rule": true,
+    "calculator_has_no_network_calls": true,
+    "no_local_absolute_paths": true,
+    "reproduction_columns_allowlisted": true,
+    "reproduction_has_no_identifier_columns": true,
+    "reproduction_numeric_only": true,
+    "reproduction_rows_1000": true,
+    "reproduction_max_error_matches": true,
+    "reproduction_audit_passed": true,
+    "model_not_refit": true,
+    "threshold_not_changed": true,
+    "python_tests_passed": true,
+    "html_parity_test_passed": true,
+    "freeze_critical_spec_matches_source": true
+  },
+  "passed": true,
+  "file_sha256": {
+    ".gitignore": "ce470293244bae746a2c807d251f1bd6c16f00cebf5e5ebb54f745ddd4dd9610",
+    "calculator/index.html": "4b42a6667fae1796d5d4698bef04eb5824260b517df7671561e83a26517a1521",
+    "calculator/README.md": "6088506453de99842833bc687b108af898a3900361c43dd5a0b80d10ecc24b50",
+    "CITATION.cff": "d34c86ef50dd09188d6f9a02ebb9a9cd104d6b65b9663bf10548ae7ce54b98d2",
+    "docs/index.html": "4b42a6667fae1796d5d4698bef04eb5824260b517df7671561e83a26517a1521",
+    "inference/example_case_output.json": "1af0eda03b28ce96a84aa8204df8fa84b45aa51003af4c0cddeb2f9dae65f884",
+    "inference/example_case_raw.json": "5608d326e64e3175690a5ef834c8dfe3ae6171aca23784589b03b72f269abcde",
+    "inference/m1_frozen_inference.py": "6c4c079c8c468330e32b84c6107e3ff4bfbd89b9ae22755364d3d156d43f07f2",
+    "inference/m1_frozen_model_spec.json": "e53d83e3dd9ff8710a9be35f6ddfd079329043fe7eddf0f2dfa49ba1c686187f",
+    "LICENSE": "976fbd9b7ac494adb9b6207262308bf22f85628c41d4d6e536383f6c4b326b56",
+    "README.md": "b692c3aae905953ebc7f471e56d5b65bef6d689e6c7871810bb9a548c02a0de7",
+    "RELEASE_NOTES_v1.0.0.md": "7bdc6ebfe4501e0e4b14c6c1ef270971d897e997bc251e3b799bbc23159a6b12",
+    "requirements.txt": "a2f20acd729186fd5e5a511992f6b73cee07a143c4a5e354aac270367c05b039",
+    "tests/test_frozen_inference.py": "2e10f3195921cd8bee1a4da6e65096d8aa1364ff17756c91df0c3a79866ceb5b",
+    "tests/test_html_calculator.mjs": "92627447b4836e8161a0c089f09d27e8840f898b132b0e339cd4871f2c8716da",
+    "validation/inference_reproduction_sample_1000.csv": "db7ccdc240cee6b9a3ac18b4be313020765b2a5d3d7b2d432940421130dc4ac2",
+    "validation/M1_TOOL_REPRODUCTION_AUDIT.json": "8b5190876657d7ebf000827da5cac4db31afb1a77ec5e45421a1a2ab7ce861eb",
+    "validation/run_release_audit.py": "a067ab3976439aabbbe94c28cf9da001925c1aefa5d1bf4f2c85fa22a947eb74"
+  },
+  "hash_exclusions": [
+    "validation/FILE_SHA256.csv",
+    "validation/PRE_RELEASE_AUDIT.json",
+    "validation/PRE_RELEASE_AUDIT.md"
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "input": {
+    "case_type": "synthetic_worked_example_not_a_real_patient",
+    "age_years": 68,
+    "icu_hours": 36,
+    "sex_male": true,
+    "diagnoses": {
+      "ich": true,
+      "sah": false,
+      "sdh": false,
+      "tbi": false
+    },
+    "mechanical_ventilation": true,
+    "gcs_motor": [
+      {
+        "hours_before_anchor": 5,
+        "value": 6
+      },
+      {
+        "hours_before_anchor": 1,
+        "value": 5
+      }
+    ],
+    "map": [
+      {
+        "hours_before_anchor": 5,
+        "value": 88
+      },
+      {
+        "hours_before_anchor": 3,
+        "value": 82
+      },
+      {
+        "hours_before_anchor": 1,
+        "value": 78
+      }
+    ],
+    "heart_rate": [
+      {
+        "hours_before_anchor": 5,
+        "value": 78
+      },
+      {
+        "hours_before_anchor": 3,
+        "value": 86
+      },
+      {
+        "hours_before_anchor": 1,
+        "value": 94
+      }
+    ],
+    "sodium": [
+      {
+        "hours_before_anchor": 20,
+        "value": 139
+      },
+      {
+        "hours_before_anchor": 5,
+        "value": 141
+      },
+      {
+        "hours_before_anchor": 1,
+        "value": 143
+      }
+    ]
+  },
+  "engineered_features": {
+    "gcs_motor_last": 5.0,
+    "gcs_motor_delta_6h": -1.0,
+    "gcs_motor_recency_hours": 1.0,
+    "icu_hours": 36.0,
+    "age": 68.0,
+    "age_over_89": 0,
+    "sex_male": 1,
+    "dx_ich": 1,
+    "dx_sah": 0,
+    "dx_sdh": 0,
+    "dx_tbi": 0,
+    "mechanical_ventilation": 1,
+    "map_last": 78.0,
+    "map_mean_6h": 82.66666666666667,
+    "map_slope_6h": -2.5,
+    "map_arv_6h": 5.0,
+    "map_count_6h": 3,
+    "map_missing": 0,
+    "heart_rate_last": 94.0,
+    "heart_rate_mean_6h": 86.0,
+    "heart_rate_slope_6h": 4.0,
+    "heart_rate_arv_6h": 8.0,
+    "heart_rate_count_6h": 3,
+    "heart_rate_missing": 0,
+    "sodium_last": 143.0,
+    "sodium_min_24h": 139.0,
+    "sodium_max_24h": 143.0,
+    "sodium_arv_6h": 2.0,
+    "sodium_count_24h": 3,
+    "sodium_missing": 0
+  },
+  "prediction": {
+    "m1_event_cif_6h": 0.056738982411137256,
+    "competitor_cif_6h": 0.1347475396927663,
+    "event_hazards_1h": [
+      0.011983829711310665,
+      0.010126414973188414,
+      0.01011906534101688,
+      0.009494195603355276,
+      0.01072272838721523,
+      0.009131054168712207
+    ],
+    "competitor_hazards_1h": [
+      0.023160352823688935,
+      0.022340677479243298,
+      0.024222646992836386,
+      0.025244126831614033,
+      0.02658640415328378,
+      0.02569917617787414
+    ],
+    "survival_6h": 0.8085134778960966,
+    "threshold": 0.028094640664533963,
+    "alert": true,
+    "rescaled_interval_hazards": 0
+  }
+}

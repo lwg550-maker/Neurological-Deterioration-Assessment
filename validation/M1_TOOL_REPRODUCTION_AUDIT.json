@@ -1,0 +1,13 @@
+{
+  "source_model_bundle": "restricted formal model bundle archived by the study team",
+  "source_thresholds": "restricted frozen-threshold record archived by the study team",
+  "rows_checked": 1000,
+  "maximum_absolute_error": 1.1102230246251565e-16,
+  "tolerance": 1e-12,
+  "passed": true,
+  "model_refit": false,
+  "threshold_changed": false,
+  "threshold": 0.028094640664533963,
+  "threshold_selection": "2017-2019 freeze set; event-level target sensitivity 80%",
+  "validation_application": "2020-2022 internal temporal validation; unchanged"
+}

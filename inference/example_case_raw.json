@@ -1,0 +1,65 @@
+{
+  "case_type": "synthetic_worked_example_not_a_real_patient",
+  "age_years": 68,
+  "icu_hours": 36,
+  "sex_male": true,
+  "diagnoses": {
+    "ich": true,
+    "sah": false,
+    "sdh": false,
+    "tbi": false
+  },
+  "mechanical_ventilation": true,
+  "gcs_motor": [
+    {
+      "hours_before_anchor": 5,
+      "value": 6
+    },
+    {
+      "hours_before_anchor": 1,
+      "value": 5
+    }
+  ],
+  "map": [
+    {
+      "hours_before_anchor": 5,
+      "value": 88
+    },
+    {
+      "hours_before_anchor": 3,
+      "value": 82
+    },
+    {
+      "hours_before_anchor": 1,
+      "value": 78
+    }
+  ],
+  "heart_rate": [
+    {
+      "hours_before_anchor": 5,
+      "value": 78
+    },
+    {
+      "hours_before_anchor": 3,
+      "value": 86
+    },
+    {
+      "hours_before_anchor": 1,
+      "value": 94
+    }
+  ],
+  "sodium": [
+    {
+      "hours_before_anchor": 20,
+      "value": 139
+    },
+    {
+      "hours_before_anchor": 5,
+      "value": 141
+    },
+    {
+      "hours_before_anchor": 1,
+      "value": 143
+    }
+  ]
+}
